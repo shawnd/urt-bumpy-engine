@@ -284,6 +284,7 @@ static	void R_LoadFatLightmaps( lump_t *l )
 		return;
 	}
 	
+	/*
 	if (tr.numLightmaps<65) 
 	{
 		//Optimize: use a 1024 if we can get away with it
@@ -291,6 +292,7 @@ static	void R_LoadFatLightmaps( lump_t *l )
 		tr.fatLightmapStep=8;
 
 	}
+	*/
 	fatbuffer = malloc( sizeof(byte)* tr.fatLightmapSize*tr.fatLightmapSize*4 );
 
 	memset(fatbuffer,128,tr.fatLightmapSize*tr.fatLightmapSize*4);

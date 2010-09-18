@@ -49,6 +49,8 @@
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\code\SDL12\include;..\..\code\libcurl;..\..\code\AL;..\..\code\libspeex\include;..\..\code\ogg_vorbis;..\..\code\freetype2;..\..\code\zlib"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;BOTLIB;USE_ICON;USE_CURL;USE_LOCAL_HEADERS;USE_VOIP;HAVE_CONFIG_H;STANDALONE;CURL_STATICLIB;USE_FREETYPE;USE_CODEC_VORBIS;USE_OPENAL;USE_OPENAL_DLOPEN;NO_GZIP"
+				ExceptionHandling="0"
+				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				PrecompiledHeaderFile="$(IntDir)\quake3.pch"
@@ -75,11 +77,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="user32.lib advapi32.lib winmm.lib ws2_32.lib wldap32.lib dxguid.lib libSDLmain.lib libSDL.lib OpenGL32.lib libcurl.lib libfreetype.lib libvorbis.lib libvorbisfile.lib libogg.lib"
+				AdditionalDependencies="user32.lib advapi32.lib winmm.lib ws2_32.lib wldap32.lib dxguid.lib SDLmain.lib SDL.lib OpenGL32.lib libcurld.lib libvorbis_static.lib libvorbisfile_static.lib libogg_static.lib"
 				OutputFile="$(OutDir)\$(ProjectName).exe"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="..\..\code\libs\msvc\debug"
+				AdditionalLibraryDirectories="..\..\code\libs\msvc8\debug"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(IntDir)\quake3.pdb"
@@ -152,6 +154,7 @@
 				AdditionalIncludeDirectories="..\..\code\SDL12\include;..\..\code\libcurl;..\..\code\AL;..\..\code\libspeex\include;..\..\code\ogg_vorbis;..\..\code\freetype2;..\..\code\zlib"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;BOTLIB;USE_ICON;USE_CURL;USE_LOCAL_HEADERS;USE_VOIP;HAVE_CONFIG_H;STANDALONE;CURL_STATICLIB;USE_FREETYPE;USE_CODEC_VORBIS;USE_OPENAL;USE_OPENAL_DLOPEN;NO_GZIP;USE_PASSPORT;VERSION= 1.35_UrT.4.1_pp.0.93"
 				StringPooling="true"
+				ExceptionHandling="0"
 				RuntimeLibrary="0"
 				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
@@ -175,11 +178,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="user32.lib advapi32.lib winmm.lib wsock32.lib ws2_32.lib wldap32.lib dxguid.lib libSDL.lib libSDLmain.lib OpenGL32.lib libcurl.lib libfreetype.lib libvorbis.lib libvorbisfile.lib libogg.lib"
+				AdditionalDependencies="user32.lib advapi32.lib winmm.lib wsock32.lib ws2_32.lib wldap32.lib dxguid.lib SDLmain.lib SDL.lib OpenGL32.lib libcurl.lib libvorbis_static.lib libvorbisfile_static.lib libogg_static.lib"
 				OutputFile="$(OutDir)\$(ProjectName).exe"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
-				AdditionalLibraryDirectories="..\..\code\libs\msvc"
+				AdditionalLibraryDirectories="..\..\code\libs\msvc8"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(IntDir)\quake3.pdb"
 				GenerateMapFile="true"
@@ -1058,10 +1061,6 @@
 						PreprocessorDefinitions=""
 					/>
 				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\..\code\server\sv_demo.c"
-				>
 			</File>
 			<File
 				RelativePath="..\..\code\server\sv_game.c"

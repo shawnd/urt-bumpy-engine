@@ -284,15 +284,13 @@ static	void R_LoadFatLightmaps( lump_t *l )
 		return;
 	}
 	
-	/*
 	if (tr.numLightmaps<65) 
 	{
 		//Optimize: use a 1024 if we can get away with it
 		tr.fatLightmapSize=1024;
 		tr.fatLightmapStep=8;
-
 	}
-	*/
+
 	fatbuffer = malloc( sizeof(byte)* tr.fatLightmapSize*tr.fatLightmapSize*4 );
 
 	memset(fatbuffer,128,tr.fatLightmapSize*tr.fatLightmapSize*4);
@@ -396,10 +394,10 @@ void R_LoadRadFile( const char* name, lump_t *l )
 			ri.Printf( PRINT_DEVELOPER, "No specular available in .RAD file... update your map.");
 		}
 
-
 		if (result>0)
 		{
-			fatbuffer = malloc( sizeof(byte)* tr.fatLightmapSize*tr.fatLightmapSize* max );
+			// TODO: Calculate the right size needed
+			fatbuffer = malloc( sizeof(byte)* tr.fatLightmapSize * tr.fatLightmapSize * 8 );
 			memset(fatbuffer,128,tr.fatLightmapSize*tr.fatLightmapSize*max);
 			
 			for ( j=0;j<max;j++)

@@ -1,0 +1,1 @@
+This is the public SVN for TwentySeven's work on the the old school idtech 3 engine based on the specific branch ioquake3. This is the planned next generation engine for the game Urban Terror. The homepage of this project is www.urbanterror.info, you can ask for support or contract TwentySeven through this website.
